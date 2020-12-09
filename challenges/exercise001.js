@@ -33,31 +33,46 @@ function getMiddleCharacter(str) {
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
-}
-
-function reverseAllWords(words) {
-  if (words === undefined) throw new Error("words is required");
-  // Add your code here!
-  let arrayWord = word.split("");
+    let arrayWord = word.split("");
   arrayWord.reverse();
   //concatinating
   let result = arrayWord.join("")
   return result
 }
 
+function reverseAllWords(words) {
+  if (words === undefined) throw new Error("words is required");
+  let resultWord = [];
+  words.forEach(word => {
+    resultWord.push(reverseWord(word))
+  });
+  return resultWord
+}
+
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  // Add your code here!
+  let result = 0;
+  users.forEach(user => {
+    if (user.type === "Linux") { result += 1 }
+  })
+  return result
 }
 
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
   // Add your code here!
+  let totalScore = 0;
+  scores.forEach(score => {
+    totalScore += score;
+  })
+  return Math.round(totalScore / scores.length * 100) / 100
 }
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
-  // Add your code here!
+  // returns "fizzbuzz" if number is divisible by 3 and 5
+  //'fizz' if the number is divisible by 3 and returns 'buzz' if the number is divisible by 5
+  return n % 5 === 0 && n % 3 == 0 ? "fizzbuzz" : n % 5 === 0 ? "buzz" : n % 3 === 0 ? "fizz" : n;
 }
 
 module.exports = {
