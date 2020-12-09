@@ -1,6 +1,5 @@
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
   if (word.length > 2) {
     let firstCharacter = word.charAt(0);
     let remaining = word.slice(1);
@@ -10,7 +9,7 @@ function capitalize(word) {
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  // Add your code here!
+  return firstName.charAt(0).toUpperCase() + "." + lastName.charAt(0).toUpperCase()
 }
 
 function addVAT(originalPrice, vatRate) {
