@@ -21,7 +21,7 @@ function countSheep(arr) {
       final += 1;
     }
   });
-  return result
+  return final
 }
 
 function hasMPostCode(person) {
