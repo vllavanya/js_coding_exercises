@@ -1,6 +1,5 @@
 function getSquares(nums) {
   if (nums === undefined) throw new Error("nums is required");
-  // Your code here!
   if (nums.length == 0) {
     return [];
   } else {
@@ -10,9 +9,7 @@ function getSquares(nums) {
 
 function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Your code here!
-
-  var final = "";
+  let final = "";
   words.forEach((word, index) => {
     if (index === 0) {
       final += word.charAt(0);
@@ -21,21 +18,17 @@ function camelCaseWords(words) {
     }
     final += word.slice(1);
   });
-
   return final;
-
 }
 
 function getTotalSubjects(people) {
   if (people === undefined) throw new Error("people is required");
-
-  var final = 0;
+  let final = 0;
   people.forEach(person => {
     if (person !== undefined || person !== null) {
       final += person.subjects.length;
     }
   });
-
   return final;
 }
 
