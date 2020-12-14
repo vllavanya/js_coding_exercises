@@ -1,3 +1,4 @@
+
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
   if (word.length > 2) {
@@ -5,7 +6,7 @@ function capitalize(word) {
     let remaining = word.slice(1);
     return firstCharacter.toUpperCase() + remaining
 }
-
+}
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
@@ -32,12 +33,7 @@ function getMiddleCharacter(str) {
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
-    let arrayWord = word.split("");
-  arrayWord.reverse();
-  //concatinating
-  let result = arrayWord.join("")
-  return result
+  return word.split("").reverse().join("")
 }
 
 function reverseAllWords(words) {
@@ -60,7 +56,6 @@ function countLinuxUsers(users) {
 
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
-  // Add your code here!
   let totalScore = 0;
   scores.forEach(score => {
     totalScore += score;
@@ -70,8 +65,6 @@ function getMeanScore(scores) {
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
-  // returns "fizzbuzz" if number is divisible by 3 and 5
-  //'fizz' if the number is divisible by 3 and returns 'buzz' if the number is divisible by 5
   return n % 5 === 0 && n % 3 == 0 ? "fizzbuzz" : n % 5 === 0 ? "buzz" : n % 3 === 0 ? "fizz" : n;
 }
 
