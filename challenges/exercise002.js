@@ -1,12 +1,10 @@
 function getFillings(sandwich) {
   if (sandwich === undefined) throw new Error("ingredients is required");
-  // Your code here!
   return sandwich.fillings
 }
 
 function isFromManchester(person) {
   if (person === undefined) throw new Error("person is required");
-  // Your code here!
   return person.city === "Manchester" ? true : false;
 }
 
@@ -28,9 +26,7 @@ function countSheep(arr) {
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
-  // Your code here!
   let postCode = person.address.postCode
-  // check for existence of letter M in postcode
   return isNaN(postCode.charAt(1)) ? false : postCode.charAt(0) == "M" ? true : false;
   
 }
