@@ -97,9 +97,14 @@ const isItPrime = n => {
 const createMatrix = (n, fill) => {
   if (n === undefined) throw new Error("n is required");
   if (fill === undefined) throw new Error("fill is required");
-  
+  let root = Math.sqrt(n);
+  let arr = [];
+  for (let i = 0; i < root; i++) {
+    arr[i] = new Array(root);
+    arr[i].fill(fill);
+  }
+  return arr;
 };
-
 /**
  * This function takes an array of staff objects in the format:
  * [

@@ -27,7 +27,11 @@ function getIntegers(nums) {
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
-  // Your code here
+  let cities = [];
+  for (let i = 0; i < users.length; i++) {
+    cities.push(users[i].data.city.displayName);
+  }
+  return cities;
 }
 
 function getSquareRoots(nums) {
@@ -38,7 +42,13 @@ function getSquareRoots(nums) {
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  // Your code here
+  let findsentence = [];
+  sentences.forEach(element => {
+    if (element.toUpperCase().indexOf(str.toUpperCase()) != (-1)) {
+      findsentence.push(element);
+    }
+  })
+  return findsentence;
 }
 
 function getLongestSides(triangles) {

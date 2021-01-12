@@ -57,7 +57,12 @@ const arrShift = arr => {
 const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
-  // Your code here!
+  for (let key in haystack) {
+    if (typeof haystack[key] === 'string') {
+      if (haystack[key].toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) return true;
+    }
+  }
+  return false;
 };
 
 
