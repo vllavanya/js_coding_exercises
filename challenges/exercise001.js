@@ -1,12 +1,8 @@
 
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-  if (word.length > 2) {
-    let firstCharacter = word.charAt(0);
-    let remaining = word.slice(1);
-    return firstCharacter.toUpperCase() + remaining
-}
-}
+    return word.charAt(0).toUpperCase() + word.slice(1)
+  }
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
@@ -28,7 +24,7 @@ function getSalePrice(originalPrice, reduction) {
 
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  return str.length % 2 === 1 ? str.charAt(str.length / 2) : str.substring((str.length / 2 )- 1, str.length / 2 + 1)
+  return str.length % 2 === 1 ? str.charAt(str.length / 2) : str.substring((str.length / 2) - 1, str.length / 2 + 1)
 }
 
 function reverseWord(word) {
@@ -38,20 +34,20 @@ function reverseWord(word) {
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  let resultWord = [];
+  let reversedWords = [];
   words.forEach(word => {
-    resultWord.push(reverseWord(word))
+    reversedWords.push(reverseWord(word))
   });
-  return resultWord
+  return reversedWords
 }
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  let result = 0;
+  let linuxUsers = 0;
   users.forEach(user => {
     if (user.type === "Linux") { result += 1 }
   })
-  return result
+  return linuxUsers
 }
 
 function getMeanScore(scores) {
