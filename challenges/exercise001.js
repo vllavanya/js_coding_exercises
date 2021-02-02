@@ -45,7 +45,7 @@ function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   let linuxUsers = 0;
   users.forEach(user => {
-    if (user.type === "Linux") { result += 1 }
+    if (user.type === "Linux") { linuxUsers += 1 }
   })
   return linuxUsers
 }
