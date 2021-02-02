@@ -1,6 +1,6 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  return nums.filter(abc => abc < 1);
+  return nums.filter(num => num < 1);
 }
 
 function findNamesBeginningWith(names, char) {
@@ -36,7 +36,7 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  return nums.map(abc => parseFloat(Math.sqrt(abc).toFixed(2)));
+  return nums.map(num => parseFloat(Math.sqrt(num).toFixed(2)));
 }
 
 function findSentencesContaining(sentences, str) {

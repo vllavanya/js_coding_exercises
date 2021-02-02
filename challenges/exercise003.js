@@ -3,7 +3,7 @@ function getSquares(nums) {
   if (nums.length == 0) {
     return [];
   } else {
-    return (Array.from(nums, abc => abc * abc));
+    return (Array.from(nums, num => num * num));
   }
 }
 
@@ -49,8 +49,8 @@ function checkIngredients(menu, ingredient) {
 function duplicateNumbers(arr1, arr2) {
   if (arr1 === undefined) throw new Error("arr1 is required");
   if (arr2 === undefined) throw new Error("arr2 is required");
-  let abc = arr1.filter(x => arr2.includes(x));
-  list = abc.filter(function (x, i, a) {
+  let num = arr1.filter(x => arr2.includes(x));
+  let list = num.filter(function (x, i, a) {
     return a.indexOf(x) === i;
   });
   return list.sort();
